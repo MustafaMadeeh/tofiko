@@ -1,11 +1,11 @@
-#tofiko
+#MustafaMadeeh
 
 require 'telegram/bot'
 
-Telegram::Bot::Client.run('التوكن لزكه هنا') do |bot|
+Telegram::Bot::Client.run('TOKEN') do |bot|
   bot.listen do |message|
 case message.text
-  when '/start', '/start@Tofikobot'
+  when '/start', '/start@BOTUSERNAME'
    bot.api.sendMessage(chat_id: message.chat.id, text: "اهلا, @#{message.from.username} ")
   when '/stop'
    bot.api.sendMessage(chat_id: message.chat.id, text: "باي, @#{message.from.username}")
@@ -15,4 +15,4 @@ end
   end
   end
   
-  #tofiko
+  #MustafaMadeeh
